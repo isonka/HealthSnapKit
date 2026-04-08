@@ -11,6 +11,8 @@
 		A10000000000000000000003 /* HealthSnapSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* HealthSnapSampleApp.swift */; };
 		A10000000000000000000004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
 		A10000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* Assets.xcassets */; };
+		A10000000000000000000017 /* DemoSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* DemoSnapshots.swift */; };
+		A10000000000000000000018 /* SampleSnapshotFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000016 /* SampleSnapshotFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A10000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000014 /* HealthSnapSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthSnapSample.entitlements; sourceTree = "<group>"; };
+		A10000000000000000000015 /* DemoSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSnapshots.swift; sourceTree = "<group>"; };
+		A10000000000000000000016 /* SampleSnapshotFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSnapshotFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 			children = (
 				A10000000000000000000011 /* HealthSnapSampleApp.swift */,
 				A10000000000000000000012 /* ContentView.swift */,
+				A10000000000000000000015 /* DemoSnapshots.swift */,
+				A10000000000000000000016 /* SampleSnapshotFormatting.swift */,
 				A10000000000000000000013 /* Assets.xcassets */,
 				A10000000000000000000014 /* HealthSnapSample.entitlements */,
 			);
@@ -137,6 +143,8 @@
 			files = (
 				A10000000000000000000003 /* HealthSnapSampleApp.swift in Sources */,
 				A10000000000000000000004 /* ContentView.swift in Sources */,
+				A10000000000000000000017 /* DemoSnapshots.swift in Sources */,
+				A10000000000000000000018 /* SampleSnapshotFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

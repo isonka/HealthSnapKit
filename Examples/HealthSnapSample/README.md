@@ -11,8 +11,9 @@ Minimal **SwiftUI** iOS app that depends on the parent **HealthSnapKit** package
 
 ## What it does
 
-- **Request Health access** calls `HealthSnapKit.requestAuthorization()`.
-- **Load samples** fetches today’s activity and heart summaries, the last few nights of sleep, and the latest body metrics, then shows them in a simple list.
+- **Data source** — **HealthKit** uses the real store (authorize first). **Mock** fills the list with static `ActivitySnapshot` / `HeartSnapshot` / `SleepSnapshot` / `BodySnapshot` values so you can demo the UI in Simulator without data.
+- **Request Health access** calls `HealthSnapKit.requestAuthorization()` (disabled in Mock mode).
+- **Load samples** fetches today’s activity and heart summaries, the last few nights of sleep, and the latest body metrics—or applies the mock snapshots when Mock is selected.
 
 Use a **real iPhone** (ideally with Apple Watch data) for meaningful HealthKit results; the Simulator often has little or no data.
 
