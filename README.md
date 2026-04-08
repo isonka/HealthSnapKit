@@ -34,6 +34,10 @@ targets: [
 
 In Xcode: **File → Add Package Dependencies…** and enter your repository URL.
 
+## Sample app
+
+A small SwiftUI demo lives under [`Examples/HealthSnapSample`](Examples/HealthSnapSample). Open `HealthSnapSample.xcodeproj`, pick a simulator or device, set your development team if needed, then run. It links the library from the repo root with a local package dependency—no published package URL required.
+
 ## Usage
 
 ```swift

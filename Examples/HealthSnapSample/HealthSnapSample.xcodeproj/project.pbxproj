@@ -1,0 +1,277 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000002 /* HealthSnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000020 /* HealthSnapKit */; };
+		A10000000000000000000003 /* HealthSnapSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* HealthSnapSampleApp.swift */; };
+		A10000000000000000000004 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
+		A10000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000010 /* HealthSnapSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthSnapSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000011 /* HealthSnapSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthSnapSampleApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000014 /* HealthSnapSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthSnapSample.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000002 /* HealthSnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000040 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000041 /* HealthSnapSample */,
+				A10000000000000000000042 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000041 /* HealthSnapSample */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000011 /* HealthSnapSampleApp.swift */,
+				A10000000000000000000012 /* ContentView.swift */,
+				A10000000000000000000013 /* Assets.xcassets */,
+				A10000000000000000000014 /* HealthSnapSample.entitlements */,
+			);
+			path = HealthSnapSample;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000042 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000010 /* HealthSnapSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000050 /* HealthSnapSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000051 /* Build configuration list for PBXNativeTarget "HealthSnapSample" */;
+			buildPhases = (
+				A10000000000000000000052 /* Sources */,
+				A10000000000000000000030 /* Frameworks */,
+				A10000000000000000000053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthSnapSample;
+			packageProductDependencies = (
+				A10000000000000000000020 /* HealthSnapKit */,
+			);
+			productName = HealthSnapSample;
+			productReference = A10000000000000000000010 /* HealthSnapSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000060 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A10000000000000000000050 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000061 /* Build configuration list for PBXProject "HealthSnapSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000040;
+			packageReferences = (
+				A10000000000000000000021 /* XCLocalSwiftPackageReference "../.." */,
+			);
+			productRefGroup = A10000000000000000000042 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000050 /* HealthSnapSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000005 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000003 /* HealthSnapSampleApp.swift in Sources */,
+				A10000000000000000000004 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A10000000000000000000072 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthSnapSample/HealthSnapSample.entitlements;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "HealthSnap Sample reads activity, sleep, heart, and body metrics to demonstrate HealthSnapKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "HealthSnap Sample does not write health data.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.healthsnap.HealthSnapSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthSnapSample/HealthSnapSample.entitlements;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "HealthSnap Sample reads activity, sleep, heart, and body metrics to demonstrate HealthSnapKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "HealthSnap Sample does not write health data.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.healthsnap.HealthSnapSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000061 /* Build configuration list for PBXProject "HealthSnapSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000070 /* Debug */,
+				A10000000000000000000071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000051 /* Build configuration list for PBXNativeTarget "HealthSnapSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000072 /* Debug */,
+				A10000000000000000000073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A10000000000000000000021 /* XCLocalSwiftPackageReference "../.." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000000000000000000020 /* HealthSnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000021 /* XCLocalSwiftPackageReference "../.." */;
+			productName = HealthSnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A10000000000000000000060 /* Project object */;
+}
