@@ -1,10 +1,10 @@
 import Foundation
 import HealthKit
 
-/// Async wrappers around completion-handler-based HealthKit queries.
+/// Async wrappers around completion-handler-based HealthKit queries (used by ``LiveHealthStore``).
 enum HKQueryAsync {
     static func statisticsCollection(
-        store: HealthStoreProtocol,
+        store: HKHealthStore,
         quantityType: HKQuantityType,
         predicate: NSPredicate,
         options: HKStatisticsOptions,
@@ -35,7 +35,7 @@ enum HKQueryAsync {
     }
 
     static func statistics(
-        store: HealthStoreProtocol,
+        store: HKHealthStore,
         quantityType: HKQuantityType,
         predicate: NSPredicate,
         options: HKStatisticsOptions
@@ -53,7 +53,7 @@ enum HKQueryAsync {
     }
 
     static func samples(
-        store: HealthStoreProtocol,
+        store: HKHealthStore,
         sampleType: HKSampleType,
         predicate: NSPredicate,
         limit: Int,
@@ -74,39 +74,5 @@ enum HKQueryAsync {
             }
             store.execute(query)
         }
-    }
-
-    static func categorySamples(
-        store: HealthStoreProtocol,
-        categoryType: HKCategoryType,
-        predicate: NSPredicate,
-        limit: Int,
-        sortDescriptors: [NSSortDescriptor]
-    ) async throws -> [HKCategorySample] {
-        let samples = try await HKQueryAsync.samples(
-            store: store,
-            sampleType: categoryType,
-            predicate: predicate,
-            limit: limit,
-            sortDescriptors: sortDescriptors
-        )
-        return samples.compactMap { $0 as? HKCategorySample }
-    }
-
-    static func quantitySamples(
-        store: HealthStoreProtocol,
-        quantityType: HKQuantityType,
-        predicate: NSPredicate,
-        limit: Int,
-        sortDescriptors: [NSSortDescriptor]
-    ) async throws -> [HKQuantitySample] {
-        let samples = try await HKQueryAsync.samples(
-            store: store,
-            sampleType: quantityType,
-            predicate: predicate,
-            limit: limit,
-            sortDescriptors: sortDescriptors
-        )
-        return samples.compactMap { $0 as? HKQuantitySample }
     }
 }

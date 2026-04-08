@@ -22,7 +22,48 @@ public final class LiveHealthStore: HealthStoreProtocol {
         store.requestAuthorization(toShare: toShare, read: read, completion: completion)
     }
 
-    public func execute(_ query: HKQuery) {
-        store.execute(query)
+    public func statisticsCollection(
+        quantityType: HKQuantityType,
+        predicate: NSPredicate,
+        options: HKStatisticsOptions,
+        anchorDate: Date,
+        intervalComponents: DateComponents
+    ) async throws -> HKStatisticsCollection {
+        try await HKQueryAsync.statisticsCollection(
+            store: store,
+            quantityType: quantityType,
+            predicate: predicate,
+            options: options,
+            anchorDate: anchorDate,
+            intervalComponents: intervalComponents
+        )
+    }
+
+    public func statistics(
+        quantityType: HKQuantityType,
+        predicate: NSPredicate,
+        options: HKStatisticsOptions
+    ) async throws -> HKStatistics? {
+        try await HKQueryAsync.statistics(
+            store: store,
+            quantityType: quantityType,
+            predicate: predicate,
+            options: options
+        )
+    }
+
+    public func samples(
+        sampleType: HKSampleType,
+        predicate: NSPredicate,
+        limit: Int,
+        sortDescriptors: [NSSortDescriptor]
+    ) async throws -> [HKSample] {
+        try await HKQueryAsync.samples(
+            store: store,
+            sampleType: sampleType,
+            predicate: predicate,
+            limit: limit,
+            sortDescriptors: sortDescriptors
+        )
     }
 }

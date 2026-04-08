@@ -1,7 +1,7 @@
 import Foundation
 import HealthKit
 
-/// Abstraction over ``HKHealthStore`` so production code and tests share the same provider surface.
+/// Abstraction over ``HKHealthStore`` so production code and tests share the same query surface.
 public protocol HealthStoreProtocol: AnyObject {
     /// Whether HealthKit is available on this device.
     func isHealthDataAvailable() -> Bool
@@ -13,6 +13,27 @@ public protocol HealthStoreProtocol: AnyObject {
         completion: @escaping @Sendable (Bool, Error?) -> Void
     )
 
-    /// Enqueues a HealthKit query.
-    func execute(_ query: HKQuery)
+    /// Runs a statistics collection query and returns the resulting collection.
+    func statisticsCollection(
+        quantityType: HKQuantityType,
+        predicate: NSPredicate,
+        options: HKStatisticsOptions,
+        anchorDate: Date,
+        intervalComponents: DateComponents
+    ) async throws -> HKStatisticsCollection
+
+    /// Runs a statistics query for a single interval.
+    func statistics(
+        quantityType: HKQuantityType,
+        predicate: NSPredicate,
+        options: HKStatisticsOptions
+    ) async throws -> HKStatistics?
+
+    /// Runs a sample query and returns matching samples.
+    func samples(
+        sampleType: HKSampleType,
+        predicate: NSPredicate,
+        limit: Int,
+        sortDescriptors: [NSSortDescriptor]
+    ) async throws -> [HKSample]
 }
