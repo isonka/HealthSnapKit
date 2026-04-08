@@ -1,3 +1,6 @@
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fisonka%2FHealthSnapKit%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/isonka/HealthSnapKit)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fisonka%2FHealthSnapKit%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/isonka/HealthSnapKit)
+
 # HealthSnapKit
 
 A small Swift library that wraps [HealthKit](https://developer.apple.com/documentation/healthkit) with an async/await API. It exposes **activity**, **sleep**, **heart rate**, **HRV**, and **body metrics** through unified `Sendable`/`Codable` models so you spend less time on query boilerplate and authorization wiring.
@@ -20,7 +23,7 @@ In `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/<your-org>/HealthSnapKit.git", from: "0.1.0"),
+    .package(url: "https://github.com/isonka/HealthSnapKit.git", from: "0.1.0"),
 ],
 targets: [
     .target(
@@ -111,15 +114,6 @@ HealthKit behavior depends on hardware and user data. **Heart rate, HRV, workout
 ## Documentation
 
 - Apple — [HealthKit](https://developer.apple.com/documentation/healthkit)
-
-## Related
-
-Other tooling in the same problem space (trimming and shipping on-device context for agents or LLMs):
-
-- [context-trimmer](https://github.com/search?q=context-trimmer&type=repositories)
-- [mobile-context-trimmer](https://github.com/search?q=mobile-context-trimmer&type=repositories)
-
-Replace those links with your canonical repository URLs when you publish them.
 
 ## License
 
