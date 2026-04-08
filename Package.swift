@@ -12,14 +12,14 @@ let package = Package(
             name: "HealthSnapKit",
             dependencies: [],
             swiftSettings: [
-                .unsafeFlags(["-strict-concurrency=complete"]),
+                .enableExperimentalFeature("StrictConcurrency"),
             ]
         ),
         .testTarget(
             name: "HealthSnapKitTests",
             dependencies: ["HealthSnapKit"],
             swiftSettings: [
-                .unsafeFlags(["-strict-concurrency=complete"]),
+                .enableExperimentalFeature("StrictConcurrency"),
             ]
         ),
     ]

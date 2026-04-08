@@ -9,7 +9,7 @@ HealthKit is powerful but repetitive: predicate construction, `HKStatisticsQuery
 ## Requirements
 
 - **iOS 17+**
-- **Swift 5.9+** (SwiftPM tools version 5.9)
+- **Swift 5.9+** (SwiftPM tools version 5.9). The package enables strict concurrency with `.enableExperimentalFeature("StrictConcurrency")` (no `unsafeFlags`, so it can be used as a transitive dependency and on the Swift Package Index). With Swift 6 language mode, you can rely on the default checking instead.
 - **Xcode / app target** with the **HealthKit** capability enabled (`com.apple.developer.healthkit` in your entitlements)
 
 The package itself has **no third-party dependencies** (HealthKit + Foundation only).
