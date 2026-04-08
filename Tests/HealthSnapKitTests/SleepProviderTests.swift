@@ -4,6 +4,7 @@ import XCTest
 @testable import HealthSnapKit
 
 final class SleepProviderTests: XCTestCase {
+    @MainActor
     func testRangeThrowsNoDataWhenSamplesEmpty() async throws {
         let mock = MockHealthStore()
         mock.samplesImpl = { _, _, _, _ in [] }
@@ -22,6 +23,7 @@ final class SleepProviderTests: XCTestCase {
         }
     }
 
+    @MainActor
     func testMapsCategorySamplesToSnapshot() async throws {
         guard let sleepType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis) else {
             XCTFail("Missing sleep type")

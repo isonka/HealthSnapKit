@@ -2,6 +2,7 @@ import Foundation
 import HealthKit
 
 /// Fetches heart rate averages, resting HR, HRV (SDNN), and per-day samples.
+@MainActor
 public final class HeartProvider {
     private let store: HealthStoreProtocol
 

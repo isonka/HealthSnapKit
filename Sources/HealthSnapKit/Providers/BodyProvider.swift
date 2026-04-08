@@ -2,6 +2,7 @@ import Foundation
 import HealthKit
 
 /// Fetches the most recent body mass, BMI, and body fat percentage samples.
+@MainActor
 public final class BodyProvider {
     private let store: HealthStoreProtocol
 

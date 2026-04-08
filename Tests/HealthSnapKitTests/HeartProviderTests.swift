@@ -4,6 +4,7 @@ import XCTest
 @testable import HealthSnapKit
 
 final class HeartProviderTests: XCTestCase {
+    @MainActor
     func testMapsQuantitySamplesToSnapshot() async throws {
         guard let hrType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
             XCTFail("Missing heart rate type")
@@ -47,6 +48,7 @@ final class HeartProviderTests: XCTestCase {
         XCTAssertEqual(snap.samples[1].bpm, 80, accuracy: 0.001)
     }
 
+    @MainActor
     func testThrowsNoDataWhenEmpty() async throws {
         let mock = MockHealthStore()
         mock.statisticsImpl = { _, _, _ in nil }

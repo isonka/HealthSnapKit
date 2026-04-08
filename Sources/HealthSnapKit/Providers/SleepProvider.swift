@@ -2,6 +2,7 @@ import Foundation
 import HealthKit
 
 /// Fetches sleep stage summaries grouped into nights.
+@MainActor
 public final class SleepProvider {
     private let store: HealthStoreProtocol
 

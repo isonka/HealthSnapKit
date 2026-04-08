@@ -2,6 +2,7 @@ import Foundation
 import HealthKit
 
 /// Fetches daily activity summaries (steps, energy, distance, exercise, stand).
+@MainActor
 public final class ActivityProvider {
     private let store: HealthStoreProtocol
 

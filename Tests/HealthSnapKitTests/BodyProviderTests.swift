@@ -4,6 +4,7 @@ import XCTest
 @testable import HealthSnapKit
 
 final class BodyProviderTests: XCTestCase {
+    @MainActor
     func testLatestThrowsNoDataWhenEmpty() async throws {
         let mock = MockHealthStore()
         mock.samplesImpl = { _, _, _, _ in [] }
@@ -20,6 +21,7 @@ final class BodyProviderTests: XCTestCase {
         }
     }
 
+    @MainActor
     func testMapsWeightSample() async throws {
         guard let massType = HKQuantityType.quantityType(forIdentifier: .bodyMass) else {
             XCTFail("Missing type")

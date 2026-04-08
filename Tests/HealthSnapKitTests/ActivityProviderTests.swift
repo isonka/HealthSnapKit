@@ -4,6 +4,7 @@ import XCTest
 @testable import HealthSnapKit
 
 final class ActivityProviderTests: XCTestCase {
+    @MainActor
     func testTodayThrowsNoDataWhenMockReturnsNoStatisticsOrSamples() async throws {
         let mock = MockHealthStore()
         mock.statisticsImpl = { _, _, _ in nil }
