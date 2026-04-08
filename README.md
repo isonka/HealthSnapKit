@@ -4,7 +4,7 @@ A small Swift library that wraps [HealthKit](https://developer.apple.com/documen
 
 ## Why this exists
 
-HealthKit is powerful but repetitive: predicate construction, `HKStatisticsQuery` / `HKSampleQuery` completion handlers, calendar-day boundaries, and permission sets for each data type. HealthSnapKit centralizes that behind typed providers and snapshots you can drop into SwiftUI (`@Observable` facade) or any async Swift code.
+HealthKit is powerful but repetitive: predicate construction, `HKStatisticsQuery` / `HKSampleQuery` completion handlers, calendar-day boundaries, and permission sets for each data type. HealthSnapKit centralizes that behind typed providers and snapshots you can drop into SwiftUI (`@MainActor` + `@Observable` facade) or use the providers directly from any isolation.
 
 ## Requirements
 

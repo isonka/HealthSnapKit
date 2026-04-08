@@ -2,6 +2,9 @@ import Foundation
 import Observation
 
 /// Entry point for HealthSnapKit: authorization and typed providers for activity, sleep, heart, and body data.
+///
+/// The facade is main-actor isolated so it can be held from SwiftUI without cross-actor `Sendable` requirements.
+@MainActor
 @Observable
 public final class HealthSnapKit {
     private let store: HealthStoreProtocol
