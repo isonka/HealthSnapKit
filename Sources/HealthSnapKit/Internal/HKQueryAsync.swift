@@ -21,7 +21,11 @@ enum HKQueryAsync {
             )
             query.initialResultsHandler = { _, collection, error in
                 if let error {
-                    continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    if HKError.isNoMatchingSamples(error) {
+                        continuation.resume(throwing: HealthSnapError.noData)
+                    } else {
+                        continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    }
                     return
                 }
                 guard let collection else {
@@ -43,7 +47,11 @@ enum HKQueryAsync {
         try await withCheckedThrowingContinuation { continuation in
             let query = HKStatisticsQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: options) { _, stats, error in
                 if let error {
-                    continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    if HKError.isNoMatchingSamples(error) {
+                        continuation.resume(returning: nil)
+                    } else {
+                        continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    }
                     return
                 }
                 continuation.resume(returning: stats)
@@ -67,7 +75,11 @@ enum HKQueryAsync {
                 sortDescriptors: sortDescriptors
             ) { _, samples, error in
                 if let error {
-                    continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    if HKError.isNoMatchingSamples(error) {
+                        continuation.resume(returning: [])
+                    } else {
+                        continuation.resume(throwing: HealthSnapError.queryFailed(error))
+                    }
                     return
                 }
                 continuation.resume(returning: samples ?? [])

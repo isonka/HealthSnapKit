@@ -54,7 +54,7 @@ public final class ActivityProvider {
         guard let interval = CalendarDayRange.dayInterval(containing: date, calendar: calendar) else {
             throw HealthSnapError.noData
         }
-        let predicate = HKQuery.predicateForSamples(withStart: interval.start, end: interval.endExclusive, options: .strictStartDate)
+        let predicate = HKQuery.predicateForSamples(withStart: interval.start, end: interval.endExclusive, options: [])
 
         var sawData = false
 

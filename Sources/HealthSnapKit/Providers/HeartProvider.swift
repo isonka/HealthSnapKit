@@ -55,7 +55,7 @@ public final class HeartProvider {
         guard let interval = CalendarDayRange.dayInterval(containing: date, calendar: calendar) else {
             throw HealthSnapError.noData
         }
-        let predicate = HKQuery.predicateForSamples(withStart: interval.start, end: interval.endExclusive, options: .strictStartDate)
+        let predicate = HKQuery.predicateForSamples(withStart: interval.start, end: interval.endExclusive, options: [])
 
         guard let hrType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
             throw HealthSnapError.noData
@@ -126,7 +126,7 @@ public final class HeartProvider {
         guard let type = HKQuantityType.quantityType(forIdentifier: identifier) else {
             return nil
         }
-        let predicate = HKQuery.predicateForSamples(withStart: start, end: endExclusive, options: .strictStartDate)
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: endExclusive, options: [])
         let list = try await store.samples(
             sampleType: type,
             predicate: predicate,

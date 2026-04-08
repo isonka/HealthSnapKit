@@ -44,7 +44,7 @@ public final class SleepProvider {
         guard let endExclusive = CalendarDayRange.exclusiveEndOfDay(containing: range.upperBound, calendar: cal) else {
             throw HealthSnapError.noData
         }
-        let predicate = HKQuery.predicateForSamples(withStart: start, end: endExclusive, options: .strictStartDate)
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: endExclusive, options: [])
         let raw = try await store.samples(
             sampleType: sleepType,
             predicate: predicate,
